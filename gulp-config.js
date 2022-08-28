@@ -36,6 +36,7 @@ module.exports = {
     // ttf2woff2: 'ttf2woff2',
     imageMin: 'image-min',
     imageWebP: 'image-webp',
+    imageResize: 'imagesResize',
     svgSprite: 'svg-sprite',
     squoosh: 'squoosh',
     cleanProd: 'clean-production',

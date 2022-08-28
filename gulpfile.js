@@ -114,6 +114,13 @@
     dest: gulpConfig.folder.build,
   });
 
+  // imageResize
+
+  requireTask(`${gulpConfig.task.imageResize}`, `./${gulpConfig.folder.tasks}/`, {
+    src: gulpConfig.folder.src,
+    dest: gulpConfig.folder.build,
+  });
+
   /**
    * Clean build folder
    */
@@ -184,6 +191,7 @@
         fileIncludepug: gulpConfig.task.fileIncludepug,
         copyFolders: gulpConfig.task.copyFolders,
         svgSprite: gulpConfig.task.svgSprite,
+        imageResize: gulpConfig.task.imageResize,
       },
     },
     false
@@ -203,10 +211,11 @@
           ),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
           gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
+          gulp.series(gulpConfig.task.imageResize),
           gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)
         ),
         gulpConfig.task.copyFolders,
-        gulp.parallel(gulpConfig.task.browserSync, gulpConfig.task.watch)
+        gulp.parallel(gulpConfig.task.browserSync, gulpConfig.task.watch),
       )
     );
 

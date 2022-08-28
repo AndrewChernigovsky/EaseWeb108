@@ -2,42 +2,26 @@
 
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const responsive = require('gulp-responsive');
+const squoosh = require('gulp-libsquoosh');
 
 
-let width = 100;
-let height = 100;
+// let width = 100;
+// let height = 100;
 
 module.exports = function (options) {
   return function imagesxdefault() {
     return gulp
-      .src(`./${options.src}/images/**/*.{png,jpg}`)
+      .src([`./${options.src}/images/**/*.{png,jpg}`])
       .pipe(
-        responsive({
-          '1*.jpg': {
-            width: 700,
-            quality: 50,
-            rename: '1x1.jpg'
-          },
-          'cover.png': {
-            width: '50%',
-            // convert to jpeg format
-            format: 'jpeg',
-            rename: 'cover.jpg'
-          },
-          // produce multiple images from one source
-          'logo.png': [
-            {
-              width: 200
+        squoosh((src) => ({
+          preprocessOptions: {
+            resize: {
+              width: Math.round(src.width / 2),
+              height: Math.round(src.height / 2),
             },
-            {
-              width: 200 * 2,
-              rename: 'logo@2x.png'
-            }
-          ]
-        })
+          },
+        }))
       )
-
       .pipe(gulp.dest(`./${options.src}/images/`));
   };
 };
