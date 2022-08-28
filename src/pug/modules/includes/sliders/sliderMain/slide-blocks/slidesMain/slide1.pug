@@ -1,0 +1,11 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper1
+    div(class=arraySliderClassSlides[0])
+        div(class=arraySliderClassSlideWrapper[0])
+            div(class=arraySliderClassSlideInner[0])
+                block quize__title-1
+                    each val in sectionTitleTexts
+                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphTitle)
+                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphThirdTitle)
+                    +icon('economy', 'economy-image', src)

@@ -1,0 +1,13 @@
+//- text 
+mixin pText
+    p(class=className)
+        if block
+            block
+        
+mixin p(className, text)
+    p(class=className)= text
+
+mixin spanText(className, text)
+    span(class=className)= text
+        if block
+            block

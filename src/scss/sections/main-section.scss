@@ -1,0 +1,16 @@
+.main {
+    background-image: url('../../images/decor/6.jpg');
+    background-color: $blue3;
+    background-size: cover;
+}
+
+.main-section {
+    min-width: 100%;
+    min-height: 150px;
+    padding: 2rem;
+
+    @include media(">=tablet") { 
+        min-height: 250px;
+        padding: 2.5rem;
+    }
+}

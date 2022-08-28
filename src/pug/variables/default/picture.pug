@@ -1,0 +1,48 @@
+//- folders
+- let folderContentName = 'content'
+- let folderDecorName = 'decor'
+- let folderIconsName = 'icons'
+- let folderSpriteName = 'sprite'
+
+- let imagesFolder = 'images'
+
+//- types files
+- let png = '.png'
+- let jpg = '.jpg'
+- let webp = '.webp'
+
+- let typesWebp = 'image/webp'
+- let logoPng = 'logoPng'
+- let logoJpg = 'logoJpg'
+- let logoWebp = 'logoWebp'
+
+//- imagesNames
+- let logoPicture = 'logo'
+
+-
+	let imagesFiles = [
+		{
+			logoPicture: {
+				paths: {
+					pathDefault: `${imagesFolder}/${folderIconsName}/${logoPicture}`,
+					pathDefault2x: `${imagesFolder}/${folderIconsName}/${logoPicture}`,
+					path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[0],
+					path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[1],
+					path3x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[2],
+					path4x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[3],
+				},
+				type: [
+					'image/webp',
+				],
+				alt: 'EaseWeb, сайты, которые продают',
+			},
+		},
+	]
+
+//- media
+-
+	let mediaArr = [
+		'min-width: 768px',
+		'min-width: 1024px',
+		'min-width: 1440px',
+	]

@@ -1,0 +1,24 @@
+section(class=introSectionClasses[0])
+	div(class=container)
+		div(class=introSectionClasses[1])
+		if (mainPage)
+			each val in sectionTitleTexts
+				+h1(sectionTitleClass, val.pageIndex__sectionIntro_ThirdTitle)
+		//- include ../../modules/includes/forms/formQuize/formQuize
+		include ../../modules/includes/sliders/sliderMain/sliderMain
+		each val in sectionTitleTexts
+			+h2(sectionTitleClass, val.pageIndex__sectionIntro_MainTitle)
+		-	let imageMedia = 2
+		- 	let jpgType = true
+		each file in imagesFiles
+			each logoImage in file
+				+picture(
+					logoImage.alt,
+					logoImage.type,
+					logoImage.paths.pathDefault,
+					logoImage.paths.pathDefault2x,
+					logoImage.paths.path,
+					logoImage.paths.path2x,
+					logoImage.paths.path3x, 
+					logoImage.paths.path4x,
+				)

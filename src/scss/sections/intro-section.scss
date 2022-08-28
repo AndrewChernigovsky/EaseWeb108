@@ -1,0 +1,20 @@
+.intro-section {
+    min-width: 100%;
+    min-height: 150px;
+    padding: 2rem;
+
+    @include media(">=tablet") { 
+        min-height: 250px;
+        padding: 2.5rem;
+    }
+
+    .main-title {
+        margin: 0 auto;
+        text-align: center;
+
+        @include media(">=tablet") { 
+            margin: 0;
+            text-align: left;
+        }
+    }
+}

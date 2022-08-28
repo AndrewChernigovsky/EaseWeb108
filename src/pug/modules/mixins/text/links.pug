@@ -1,0 +1,4 @@
+//- links
+mixin aLink(urlLink, className, ...links)
+    each link in links
+        a(href=urlLink, class=className)= link
