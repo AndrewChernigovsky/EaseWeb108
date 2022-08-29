@@ -5,6 +5,9 @@ block variables
     include ../abstraction/variables
     -   let srcVal = 0
     -   let swiperVar = 0
+    -	let imageMedia = 0
+    - 	let jpgType = false
+    -	let logoMedia = 0
 block head 
     include ../partials/head/head
 
@@ -12,7 +15,6 @@ block title
     each title in titles
         if title == indexTitles
             title= title.index
-
 block content
     include ../sections/header/header
     main(class="main")

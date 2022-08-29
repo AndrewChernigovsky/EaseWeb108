@@ -1,33 +1,24 @@
-//- mixin picture(idImg, className, ...source)
-//-     for logos in imagesFiles
-//-         picture
-//-             source(type=typesPng media=mediaArr[0] srcset=logos.logoPng)
-//-             source(type=typesJpg media=mediaArr[1] srcset=logos.logoJpg)
-//-             source(type=typesWebp media=mediaArr[2] srcset=logos.logoWebp)
-//-             img(src=logos.logoJpgIMGMin srcset=logos.logoJpgIMG alt=logos.alt)
+mixin icon(viewBox, width, height, id)
+    svg(viewBox=viewBox, width=width, height=height)
+        use(xlink:href=id)
 
-mixin icon(id, className, alt, media)
+mixin picture(alt, type, path, path2x)
     picture
-        source(type, media, srcset)
-        source(type, media, srcset)
-        source(type, media, srcset)
-        img(id, src, srcset,alt)
-
-mixin picture(alt, type, pathDefault, pathDefault2x, path, path2x, path3x, path4x)
-    picture
-        if (imageMedia == 0)
-            source(srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ), type=type, media=mediaArr[0])
-
-        if (imageMedia == 1)
-            source(srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ), type=type, media=mediaArr[0])
-            source(srcset=(path2x  + webp + ' 1x' + ', ' + path3x  + webp + ' 2x' ), type=type, media=mediaArr[1])
-
-        if (imageMedia == 2)
-            source(srcset=(path  +  webp + ' 1x' + ', ' + path2x+ webp + ' 2x' ), type=type, media=mediaArr[0])
-            source(srcset=(path2x  + webp + ' 1x' + ', ' + path3x + webp + ' 2x' ), type=type, media=mediaArr[1])
-            source(srcset=(path3x  + webp + ' 1x' + ', ' + path4x  + webp + ' 2x' ), type=type, media=mediaArr[2])
+        source(type=type, media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
 
         if jpgType
-            img(src=pathDefault + jpg, loading="lazy", decoding="async", srcset=(pathDefault  + jpg + ' 1x' + ', ' + pathDefault2x  + jpg + ' 2x' ) alt=alt)
-        if pngType
-            img(src=pathDefault + png, loading="lazy", decoding="async", srcset=(pathDefault  + png + ' 1x' + ', ' + pathDefault2x  + png + ' 2x' ) alt=alt)
+            img(src=pathDefault + jpg, loading="lazy", decoding="async", alt=alt)
+        else
+            img(src=pathDefault + png, loading="lazy", decoding="async", alt=alt)
+
+mixin logo(alt, type, path, path2x)
+    picture
+        if (logoMedia == 0)
+            source(type=type, media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+            source(media=mediaArr[0], srcset=(path + png + ' 1x' + ', ' + path2x + png + ' 2x' ))
+     
+        if jpgType
+            img(src=path + jpg,  srcset=(path + jpg + ' 1x' + ', ' + path2x + jpg + ' 2x' ), loading="lazy", decoding="async", alt=alt)
+        else
+            img(src=path + png, loading="lazy", decoding="async", alt=alt)

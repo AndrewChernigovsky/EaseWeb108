@@ -1,3 +1,10 @@
 div(class=logoClasses[0])
     a(class=logoClasses[1])
-        //- +picture('logo', classNameLogo, imagesUrlSrc)
+        each file in imagesFiles
+            each logoImage in file
+                +logo(
+                            logoImage.alt,
+                            logoImage.type,
+                            logoImage.paths.path,
+                            logoImage.paths.path2x,
+                        )

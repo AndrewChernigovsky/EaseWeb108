@@ -26,16 +26,12 @@
 		{
 			logoPicture: {
 				paths: {
-					pathDefault: `${imagesFolder}/${folderIconsName}/${logoPicture}`,
-					pathDefault2x: `${imagesFolder}/${folderIconsName}/${logoPicture}`,
-					path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[0],
-					path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[1],
-					path3x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[2],
-					path4x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[3],
+					path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[0],
+					path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[1],
+					// path3x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[2],
+					// path4x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[3],
 				},
-				type: [
-					'image/webp',
-				],
+				type: 'image/webp',
 				alt: 'EaseWeb, сайты, которые продают',
 			},
 		},
@@ -44,7 +40,7 @@
 //- media
 -
 	let mediaArr = [
-		'min-width: 768px',
-		'min-width: 1024px',
-		'min-width: 1440px',
+		'(min-width: 768px)',
+		'(min-width: 1024px)',
+		'(min-width: 1440px)',
 	]
