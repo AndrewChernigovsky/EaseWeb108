@@ -31,11 +31,11 @@
     "gulp-debug": "^4.0.0",
     "gulp-eslint": "^6.0.0",
     "gulp-file-include": "^2.1.1",
+    "gulp-gm": "0.0.9",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlhint": "^3.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.2.0",
-    "gulp-libsquoosh": "^1.0.12",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
@@ -62,7 +62,8 @@
     "production": "gulp build",
     "start": "gulp",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "resize": "gulp resize"
   },
   "dependencies": {
     "choices.js": "^9.0.1",

@@ -4,6 +4,7 @@
   const gulpConfig = require('./gulp-config.js');
   const gulp = require('gulp');
   const browserSync = require('browser-sync').create();
+  const squoosh = require('gulp-libsquoosh');
 
   function requireTask(taskName, path, options, dependencies) {
     let settings = options || {};
@@ -87,18 +88,6 @@
     checkProduction: true,
   });
 
-  // fonts
-
-  // requireTask(`${gulpConfig.task.ttf2woff}`, `./${gulpConfig.folder.tasks}}/`, {
-  //   src: gulpConfig.folder.src,
-  //   dest: gulpConfig.folder.build,
-  // });
-
-  // requireTask(`${gulpConfig.task.ttf2woff2}`, `./${gulpConfig.folder.tasks}}/`, {
-  //   src: gulpConfig.folder.src,
-  //   dest: gulpConfig.folder.build,
-  // });
-
     /**
    * Minify images
    */
@@ -110,13 +99,6 @@
   // WEBP
 
   requireTask(`${gulpConfig.task.imageWebP}`, `./${gulpConfig.folder.tasks}/`, {
-    src: gulpConfig.folder.src,
-    dest: gulpConfig.folder.build,
-  });
-
-  // imageResize
-
-  requireTask(`${gulpConfig.task.imageResize}`, `./${gulpConfig.folder.tasks}/`, {
     src: gulpConfig.folder.src,
     dest: gulpConfig.folder.build,
   });
@@ -203,15 +185,9 @@
         gulpConfig.task.cleanBuild,
         gulpConfig.task.esLint,
         gulp.parallel(
-          gulp.series(gulpConfig.task.fileIncludepug, 
-            // gulp.parallel(
-            //   gulpConfig.task.ttf2woff,
-            //   gulpConfig.task.ttf2woff2
-            // )
-          ),
+          gulp.series(gulpConfig.task.fileIncludepug),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
           gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
-          gulp.series(gulpConfig.task.imageResize),
           gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)
         ),
         gulpConfig.task.copyFolders,
@@ -250,7 +226,7 @@
   gulp.task(
     'sprite', 
     gulp.series(
-            gulpConfig.task.svgSprite
+          gulpConfig.task.svgSprite
         )
     );
 })();

@@ -7,8 +7,10 @@
 import menuBurger from './components/burger-menu';
 import swiperMain from './components/slider';
 import tabs from './components/tabs';
+import blurIMG from './components/blurIMG';
 
 (($) => {
+  blurIMG;
   // When DOM is ready
   $(() => {
     //const accordions = new Accordion();

@@ -13,7 +13,6 @@ mixin icon(id, className, alt, media)
         source(type, media, srcset)
         img(id, src, srcset,alt)
 
-
 mixin picture(alt, type, pathDefault, pathDefault2x, path, path2x, path3x, path4x)
     picture
         if (imageMedia == 0)
@@ -29,6 +28,6 @@ mixin picture(alt, type, pathDefault, pathDefault2x, path, path2x, path3x, path4
             source(srcset=(path3x  + webp + ' 1x' + ', ' + path4x  + webp + ' 2x' ), type=type, media=mediaArr[2])
 
         if jpgType
-            img(src=pathDefault + jpg, srcset=(pathDefault  + jpg + ' 1x' + ', ' + pathDefault2x  + jpg + ' 2x' ) alt=alt)
+            img(src=pathDefault + jpg, loading="lazy", decoding="async", srcset=(pathDefault  + jpg + ' 1x' + ', ' + pathDefault2x  + jpg + ' 2x' ) alt=alt)
         if pngType
-            img(src=pathDefault + png, srcset=(pathDefault  + png + ' 1x' + ', ' + pathDefault2x  + png + ' 2x' ) alt=alt)
+            img(src=pathDefault + png, loading="lazy", decoding="async", srcset=(pathDefault  + png + ' 1x' + ', ' + pathDefault2x  + png + ' 2x' ) alt=alt)
