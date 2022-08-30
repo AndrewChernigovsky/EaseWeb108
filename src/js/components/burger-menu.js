@@ -11,7 +11,6 @@ const menuBurger =(() => {
   const menuBurgers = function menuBurger(){
     BURGER.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('click');
       NAV.classList.toggle(CLASS_ACTIVE);
       BURGER.classList.toggle(CLASS_ACTIVE)
     })

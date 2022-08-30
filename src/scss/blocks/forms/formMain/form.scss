@@ -10,7 +10,7 @@
 .formLabel,
 .formInput,
 .buttonFormSubmit {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 .formLabel,
 .buttonFormSubmit {
@@ -73,6 +73,7 @@
     cursor: pointer;
     min-height: 30px;
     line-height: 30px;
+    max-width: calc(300px - 25px);
 
     &::after {
         content: '';

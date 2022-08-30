@@ -7,6 +7,16 @@
 import menuBurger from './components/burger-menu';
 import swiperMain from './components/slider';
 import tabs from './components/tabs';
+import {btnOffer, swiperMain1} from './components/btnOffer';
+
+
+if(btnOffer) {
+  btnOffer.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('click');
+    swiperMain1.classList.toggle('active')
+  })
+}
 
 (($) => {
   // When DOM is ready
