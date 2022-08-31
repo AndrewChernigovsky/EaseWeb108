@@ -51,7 +51,7 @@
     left: 0;
     width: 90%;
     margin-left: 0;
-    z-index: 123;
+    z-index: 89;
   }
 
   &__list {
@@ -89,7 +89,7 @@
   width: 30px;
   height: 30px;
   position: relative;
-  z-index: 124;
+  z-index: 90;
   @extend %d-flex-column;
   justify-content: center;
   align-items: center;
