@@ -8,10 +8,12 @@ section(class=introSectionClasses[0])
 			include ../../modules/includes/sliders/sliderMain/sliderMain
 			each val in sectionTitleTexts
 				+h2(sectionTitleClass, val.pageIndex__sectionIntro_MainTitle)
-				//- each file in logoImage
-				//- 	+picture(
-				//- 		file.alt,
-				//- 		file.type,
-				//- 		file.paths.path,
-				//- 		file.paths.path2x,
-				//- 	)
+			each obj in imagesArr
+				each file in obj
+					if obj == introSection
+						+picture(
+							file.alt,
+							file.type,
+							file.paths.path,
+							file.paths.path2,
+						)
