@@ -1,25 +1,17 @@
 section(class=introSectionClasses[0])
 	div(class=container)
 		div(class=introSectionClasses[1])
-		if (mainPage)
+			if (mainPage)
+				each val in sectionTitleTexts
+					+h1(sectionTitleClass, val.pageIndex__sectionIntro_ThirdTitle)
+			include ../../blocks/offer
+			include ../../modules/includes/sliders/sliderMain/sliderMain
 			each val in sectionTitleTexts
-				+h1(sectionTitleClass, val.pageIndex__sectionIntro_ThirdTitle)
-		//- include ../../modules/includes/forms/formQuize/formQuize
-		include ../../blocks/offer
-		include ../../modules/includes/sliders/sliderMain/sliderMain
-		each val in sectionTitleTexts
-			+h2(sectionTitleClass, val.pageIndex__sectionIntro_MainTitle)
-			each file in imagesFiles
-				each logoImage in file
-					+picture(
-						logoImage.alt,
-						logoImage.type,
-						logoImage.paths.path,
-						logoImage.paths.path2x,
-					)
-					+logo(
-						logoImage.alt,
-						logoImage.type,
-						logoImage.paths.path,
-						logoImage.paths.path2x,
-					)
+				+h2(sectionTitleClass, val.pageIndex__sectionIntro_MainTitle)
+				//- each file in logoImage
+				//- 	+picture(
+				//- 		file.alt,
+				//- 		file.type,
+				//- 		file.paths.path,
+				//- 		file.paths.path2x,
+				//- 	)

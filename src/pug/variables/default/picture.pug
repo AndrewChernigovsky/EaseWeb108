@@ -20,21 +20,26 @@
 
 //- imagesNames
 - let logoPicture = 'logo'
+- let introSection__mainOffer = 'woman'
 
 -
-	let imagesFiles = [
-		{
-			logoPicture: {
-				paths: {
-					path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[0],
-					path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[1],
-					// path3x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[2],
-					// path4x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[3],
-				},
-				type: 'image/webp',
-				alt: 'EaseWeb, сайты, которые продают',
-			},
+	let logoImage = [
+		paths: {
+			path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[0],
+			path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizes1000[1],
 		},
+		type: 'image/webp',
+		alt: 'EaseWeb, сайты, которые продают'
+	]
+
+-
+	let introSection = [
+		paths: {
+			path: `${imagesFolder}/${folderContentName}/${introSection__mainOffer}` + sizes1000[0],
+			path2x: `${imagesFolder}/${folderContentName}/${introSection__mainOffer}` + sizes1000[1],
+		},
+		type: 'image/webp',
+		alt: 'EaseWeb, сайты, которые продают'
 	]
 
 //- media

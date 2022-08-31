@@ -8,9 +8,9 @@ mixin picture(alt, type, path, path2x)
         source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
 
         if jpgType
-            img(src=pathDefault + jpg, loading="lazy", decoding="async", alt=alt)
+            img(src=path + jpg, loading="lazy", decoding="async", alt=alt)
         else
-            img(src=pathDefault + png, loading="lazy", decoding="async", alt=alt)
+            img(src=path + png, loading="lazy", decoding="async", alt=alt)
 
 mixin logo(alt, type, path, path2x)
     picture
