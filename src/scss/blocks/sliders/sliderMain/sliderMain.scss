@@ -111,3 +111,10 @@
     z-index: 333;
     transition: $base-transition;
 }
+
+.buttonFormSliderMain {
+    width: 300px;
+    min-height: 50px;
+    background: $white;
+    color: $black;
+}
