@@ -25,6 +25,6 @@ module.exports = function (options) {
           },
         })
       )
-      .pipe(gulp.dest(`./${options.dest}/images/sprite`));
+      .pipe(gulp.dest(`./${options.src}/images/sprite`));
   };
 };
