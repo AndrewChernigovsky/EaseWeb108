@@ -5,18 +5,18 @@
 
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
-import swiperMain from './components/slider';
+import swiperMain from './components/sliders/swiperMain';
+import swiperOffer from './components/sliders/swiperOffer';
 import tabs from './components/tabs';
-import bntOFFER from './components/btnOffer';
+// import bntOFFER from './components/btnOffer';
 
 (($) => {
   // When DOM is ready
   $(() => {
     //const accordions = new Accordion();
     menuBurger.init();
-    if(bntOFFER) {
-      swiperMain.init();
-    }
+    swiperMain.init();
+    swiperOffer.init();
     tabs.init();
   });
 })(jQuery);

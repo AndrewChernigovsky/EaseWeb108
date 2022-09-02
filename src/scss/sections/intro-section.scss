@@ -23,15 +23,17 @@
     
     min-width: 100%;
     min-height: 100%;
-    background: linear-gradient(63deg, rgb(255,255,255) 40%, rgba(4,54,175,1) 40%);
-    background-image: url('../../images/decor/file7@2000x2000.jpg');
+    
+    background: linear-gradient(63deg, $orange3, $orange);
     background-size: cover;
-    @include media(">=tablet") { 
-        background-image: url('../../images/decor/file7@3000x3000.jpg');
-    }
-    @include media(">=desktop") { 
-        background-image: url('../../images/decor/file7@3500x3500.jpg');
-    }
+    // background-image: url('../../images/decor/file7@2000x2000.jpg');
+    
+    // @include media(">=tablet") { 
+    //     background-image: url('../../images/decor/file7@3000x3000.jpg');
+    // }
+    // @include media(">=desktop") { 
+    //     background-image: url('../../images/decor/file7@3500x3500.jpg');
+    // }
 
     img {
         max-height: 500px;
