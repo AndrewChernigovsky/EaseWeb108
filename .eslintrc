@@ -3,12 +3,11 @@
 		"jQuery": true,
 		"$": true
 	},
-	"extends": "htmlacademy/vanilla",
 	"env": {
 		"browser": true,
 		"node": true
 	},
-	
+	"extends": "airbnb-base",
 	"rules": {
 		"no-underscore-dangle": "off",
 		"linebreak-style": [

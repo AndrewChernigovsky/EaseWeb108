@@ -17,7 +17,7 @@
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
     "del": "^5.1.0",
-    "eslint-config-htmlacademy": "^6.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "files-exist": "^1.1.0",
     "gulp": "^4.0.2",

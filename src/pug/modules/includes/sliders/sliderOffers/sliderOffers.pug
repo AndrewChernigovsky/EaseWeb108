@@ -1,19 +1,19 @@
 extends ../../../../layout/sliders/sliderMain/sliderMain
 
 block mainWrapper
-    div(class=arraySliderClassWrappers[1])
-        block mainWrapper
-            div(class=arraySlidersClass[1] id=swiperOfferID)
-                block wrapper
-                    div(class=arraySliderClassWrappers[0])
-                        block includes
-                            include slide-blocks/slide1
-                            include slide-blocks/slide2
-                            include slide-blocks/slide3
-                    block pagination
-                        div(class=arraySliderNavigation[0])
-                    block navigation
-                        div(class=arraySliderNavigation[1])
-                        div(class=arraySliderNavigation[2])
-                    block scrollbar
-                        div(class=arraySliderNavigation[3])
+    div(class=classSliderOffer id=swiperOfferID)
+        block wrapper
+            div(class=classSliderOfferWrapper)
+                block includes
+                    include slide-blocks/slide1
+                    include slide-blocks/slide2
+                    include slide-blocks/slide3
+
+            block pagination
+                div(class=swiperPagination)
+            block navigation
+                div(class=swiperButtonPrev)
+                div(class=swiperButtonNext)
+            block scrollbar
+                div(class=swiperScrollbar)
+

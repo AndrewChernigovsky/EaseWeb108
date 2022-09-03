@@ -4,7 +4,6 @@
   const gulpConfig = require('./gulp-config.js');
   const gulp = require('gulp');
   const browserSync = require('browser-sync').create();
-  const squoosh = require('gulp-libsquoosh');
 
   function requireTask(taskName, path, options, dependencies) {
     let settings = options || {};
@@ -140,13 +139,6 @@
       dest: gulpConfig.folder.build
     });
   
-
-    //Squoosh
-
-    requireTask(`${gulpConfig.task.squoosh}`, `./${gulpConfig.folder.tasks}/`, {
-      src: gulpConfig.folder.src
-    });
-  
   /**
    * Start browserSync server
    */
@@ -217,7 +209,6 @@
   gulp.task(
     'webp', 
     gulp.series(
-            gulpConfig.task.squoosh,
             gulpConfig.task.imageMin,
             gulpConfig.task.imageWebP
         )
