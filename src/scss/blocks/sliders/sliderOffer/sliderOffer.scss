@@ -15,6 +15,32 @@
 
     &__wrapper {
         min-height: 350px;
+        max-height: 350px;
+    }
+
+    .swiper-text-wrapper {
+        text-align: right;
+    }
+
+    .swiper-image-wrapper {
+        max-width: 500px;
+    }
+
+    .paragaraph-icon-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+            line-height: 3rem;
+        }
+
+        svg {
+            margin-left: 2rem;
+            width: 25px;
+            height: 25px;
+            fill: white;
+        }
     }
 
     &__slide-inner {
@@ -24,10 +50,6 @@
         display: flex;
         justify-content: flex-end;
         padding-right: 5rem;
-
-        img {
-            max-height: 500px;
-        }
 
         @include media('>=tablet') {
             padding:  2rem;

@@ -1,4 +1,14 @@
 div(class=classSliderOfferSlide)
     div(class=classSliderOfferSlideWrapper)
         div(class=classSliderOfferSlideInner)
-            include ../../../pictures/page__index/content/woman
+            div(class=swiperSliderImage)
+                include ../../../pictures/page__index/content/woman
+            div(class=swiperTextWrapper)
+                +h2(swiperOfferText.slide1H2)
+                div(class=paragraph__icon)
+                    +p(swiperOfferText.slide1Paraghraph1)
+                    include ../../../pictures/page__index/icons/aprove
+                div(class=paragraph__icon)
+                    +p(swiperOfferText.slide1Paraghraph2)
+                    include ../../../pictures/page__index/icons/aprove
+                +a(urlLinkSwiperOffer, swiperOfferText.slide1Link2)

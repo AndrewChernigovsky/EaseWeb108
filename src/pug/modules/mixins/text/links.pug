@@ -2,3 +2,6 @@
 mixin aLink(urlLink, className, ...links)
     each link in links
         a(href=urlLink, class=className)= link
+
+mixin a(urlLink, text)
+    a(href=urlLink, class=base__text+base__link)= text

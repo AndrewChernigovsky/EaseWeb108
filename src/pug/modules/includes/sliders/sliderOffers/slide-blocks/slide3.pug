@@ -1,4 +1,10 @@
 div(class=classSliderOfferSlide)
     div(class=classSliderOfferSlideWrapper)
         div(class=classSliderOfferSlideInner)
-            include ../../../pictures/page__index/content/woman2
+            div(class=swiperSliderImage)
+                include ../../../pictures/page__index/content/woman2
+            div(class=swiperTextWrapper)
+                +h2(swiperOfferText.slide3H2)
+                +p(swiperOfferText.slide3Paraghraph1)
+                +p(swiperOfferText.slide3Paraghraph2)
+                +a(urlLinkSwiperOffer, swiperOfferText.slide3Link2)

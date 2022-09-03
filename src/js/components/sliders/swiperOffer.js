@@ -4,7 +4,7 @@ const swiperOffer = (() => {
 	  spaceBetween: 20,
 	  speed: 800,
 	  autoplay: {
-		delay: 1000500,
+		delay: 300500,
 		disableOnInteraction: false,
 	  },
 	  centerInsufficientSlides: true,

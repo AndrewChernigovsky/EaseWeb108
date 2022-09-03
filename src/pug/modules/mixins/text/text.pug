@@ -4,8 +4,8 @@ mixin pText
         if block
             block
         
-mixin p(className, text)
-    p(class=className)= text
+mixin p(text)
+    p(class=base__text)= text
 
 mixin spanText(className, text)
     span(class=className)= text
