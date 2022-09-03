@@ -14,6 +14,12 @@ mixin picturePNG(alt, type, path, path2x)
         source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
         img(src=path + png, loading="lazy", decoding="async", alt=alt)
 
+mixin swiperPicturePNG(alt, type, path, path2x)
+    picture
+        source(type=type, media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(class=swiperLazy data-src=path + png, data-srcset=path2x + png + '1x', alt=alt)
+
 mixin logo(alt, type, path, path2x)
     picture
         if (logoMedia == 0)

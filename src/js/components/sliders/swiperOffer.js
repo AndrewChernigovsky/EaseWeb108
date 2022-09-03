@@ -3,11 +3,18 @@ const swiperOffer = (() => {
 	  slidesPerView: 1,
 	  spaceBetween: 20,
 	  speed: 800,
+	  loop: true,
+	  preloadImages: false,
+	  lazy: true,
 	  autoplay: {
-		delay: 300500,
+		delay: 3500,
 		disableOnInteraction: false,
 	  },
 	  centerInsufficientSlides: true,
+	  effect: 'fade',
+	  fadeEffect: {
+		crossFade: true
+	  },
 	  pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
