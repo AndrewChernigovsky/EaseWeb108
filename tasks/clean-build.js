@@ -11,8 +11,8 @@ module.exports = function (options) {
     const deletedPaths = await del([
       `*.html`,
       `${options.src}/**/*`,
-      `!${options.src}/images/`,
-      `!${options.src}/images/**`
+      // `!${options.src}/images/`,
+      // `!${options.src}/images/**`
     ], { force: true });
 
     // log paths for deleted files & directories

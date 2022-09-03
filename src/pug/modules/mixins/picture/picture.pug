@@ -6,11 +6,13 @@ mixin picture(alt, type, path, path2x)
     picture
         source(type=type, media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
         source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(src=path + jpg, loading="lazy", decoding="async", alt=alt)
 
-        if jpgType
-            img(src=path + jpg, loading="lazy", decoding="async", alt=alt)
-        else
-            img(src=path + png, loading="lazy", decoding="async", alt=alt)
+mixin picturePNG(alt, type, path, path2x)
+    picture
+        source(type=type, media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=type, media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(src=path + png, loading="lazy", decoding="async", alt=alt)
 
 mixin logo(alt, type, path, path2x)
     picture
