@@ -22,15 +22,15 @@
 }
 
 .title__h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 
   @include media('>=tablet') {
-    font-size: 2.2rem;
+    font-size: 4.2rem;
     margin-bottom: 2rem;
   }
   @include media('>=desktop') {
-    font-size: 2.6rem;
+    font-size: 6.6rem;
     margin-bottom: 3rem;
   }
 }
@@ -87,5 +87,58 @@
   &:active {
     color: $orange;
     border-bottom: 1px solid $orange;
+  }
+}
+
+.color-w{
+  color: $white;
+}
+
+.introBlock-titleH1 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+}
+
+.introBlock-paraghraph {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+  font-size: 4rem;
+}
+
+.introBlock-paraghraphMin {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+  font-size: 1.5rem;
+  overflow: hidden;
+  
+  
+
+  @include media('>=desktop') {
+    font-size: 2.4rem;
+    width: 72ch;
+    animation: cursor 0.75s step-end infinite, printed_text 8s steps(72);
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    border-right: 3px solid $white;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-color: $white;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: $white;
+  }
+}
+
+@keyframes printed_text {
+  from {
+    width: 0;
   }
 }

@@ -1,9 +1,23 @@
 .intro-block {
     position: relative;
-    background-image: url('../../images/content/bg-111.jpg');
+    background-image: url('../../images/content/bg-1-mb.jpg');
     background-size: cover;
     background-position: center;
     min-height: 500px;
+
+    &__wrapper {
+        padding-top: 1rem;
+
+        @include media('>=tablet') {
+            padding-top: 3rem;
+            max-width: 80%;
+        }
+    }
+
+    @include media('>=tablet') {
+        background-image: url('../../images/content/bg-111.jpg');
+    }
+
     // &::after{
     //     content: '';
     //     display: block;
