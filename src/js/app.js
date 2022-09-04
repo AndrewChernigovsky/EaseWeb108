@@ -6,6 +6,7 @@
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
 import swiperMain from './components/sliders/swiperMain';
+import swiperCase from './components/sliders/swiperCase';
 import swiperOffer from './components/sliders/swiperOffer';
 import tabs from './components/tabs';
 // import bntOFFER from './components/btnOffer';
@@ -17,6 +18,7 @@ import tabs from './components/tabs';
     menuBurger.init();
     swiperMain.init();
     swiperOffer.init();
+    swiperCase.init();
     tabs.init();
   });
 })(jQuery);
