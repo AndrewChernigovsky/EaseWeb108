@@ -1,11 +1,11 @@
 .swiper-case {
-    background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
+    // background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
   
     // background: $orange5;
     background-size: cover;
     max-width: 100%;
     margin: 0 auto;
-
+    color: $white;
     // @include media(">=tablet") { 
     //     background-image: url('../../images/decor/file2@3000x3000.jpg');
     // }
@@ -47,13 +47,14 @@
         max-width: 100%;
         padding:  1rem;
         margin: 0 auto;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 5rem;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        gap: 2rem;
 
         @include media('>=tablet') {
             padding:  2rem;
-            padding-right: 15rem;
             margin-bottom: -2.5rem;
         }
     }
