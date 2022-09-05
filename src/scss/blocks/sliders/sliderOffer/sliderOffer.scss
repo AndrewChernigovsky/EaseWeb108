@@ -1,10 +1,11 @@
 .swiper-offer {
-    background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
-  
+    // background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
+    // background-image: url('../../images/content/bg-2.jpg');
     // background: $orange5;
-    background-size: cover;
+    // background-size: cover;
     max-width: 100%;
     margin: 0 auto;
+    position: relative;
 
     // @include media(">=tablet") { 
     //     background-image: url('../../images/decor/file2@3000x3000.jpg');
@@ -13,9 +14,28 @@
     //     background-image: url('../../images/decor/file2@3500x3500.jpg');
     // }
 
+
+
     &__wrapper {
-        min-height: 350px;
-        max-height: 350px;
+        min-height: 450px;
+        max-height: 450px;
+    }
+
+    &__slide{
+        min-height: 600px;
+    }
+
+    &__slide.slide1 {
+        background-image: url('../../images/content/bg-2.jpg');
+        background-size: cover;
+    }
+    &__slide.slide2 {
+        background-image: url('../../images/content/bg-3.jpg');
+        background-size: cover;
+    }
+    &__slide.slide3 {
+        background-image: url('../../images/content/bg-4.jpg');
+        background-size: cover;
     }
 
     .swiper-text-wrapper {
