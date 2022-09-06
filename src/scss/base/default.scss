@@ -106,3 +106,13 @@ body.overflow-hidden {
   overflow: hidden;
   width: calc(100% - 17px);
 }
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @include media(">=tablet") { 
+    padding-top: 2rem;
+    padding-bottom: 2rem;  
+  }
+}
