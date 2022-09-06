@@ -1,8 +1,9 @@
-section(class=intro2Section)
+section(class=stepsWorkingSection)
 	div(class=container)
-		div(class=intro2SectionWrapper+color__white)
+		+h2(stepsWorkingText.h2, ClassstepsWorkingTitle__h2)
+		div(class=stepsWorkingWrapper+color__white)
 			if (mainPage)
-				+h2(intro2SectionText.h2, ClassIntro2SectionTitle__h2)
-				+p(intro2SectionText.p1, ClassIntro2SectionParagraph__p)
-				+p(intro2SectionText.p2, ClassIntro2SectionParagraphMin__p)
-			include ../../modules/includes/blocks/list-intro2Section
+				include ../../modules/includes/blocks/stepsWorkingSection-cards/stepsWorkingSection-card1
+				include ../../modules/includes/blocks/stepsWorkingSection-cards/stepsWorkingSection-card2
+				include ../../modules/includes/blocks/stepsWorkingSection-cards/stepsWorkingSection-card3
+				include ../../modules/includes/blocks/stepsWorkingSection-cards/stepsWorkingSection-card4
