@@ -1,0 +1,62 @@
+.offerSection {
+    background: linear-gradient(45deg, $darkblue1, $darkblue2);
+    position: relative;
+
+    .offerSection-titleH2 {
+        border-bottom: 1px solid $white;
+        padding-bottom: 1rem;
+    }
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     display: block;
+    //     width: 0;
+    //     height: 0;
+    //     border-top: 260px solid $white;
+    //     border-left: 280px solid transparent;
+    //     top: 0;
+    //     right: 0;
+    // }
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     display: block;
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 260px solid $white;
+    //     border-right: 280px solid transparent;
+    //     top: 0;
+    //     left: 0;
+    // }
+
+    &__wrapper {
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    &__inner {
+        position: relative;
+        padding-bottom: 50px;
+
+        button {
+            color: $white;
+            font-size: 2rem;
+            position: absolute;
+            bottom: 0;
+            transition: $base-transition;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .title__h3 {
+            color: $orange;
+        }
+    }
+}
