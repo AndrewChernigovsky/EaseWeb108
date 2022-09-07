@@ -1,0 +1,16 @@
+.personalSection {
+    background-color: $white;
+    color: $black;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    &__inner {
+        // border: 1px solid $blue;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+}

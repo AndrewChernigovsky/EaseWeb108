@@ -110,6 +110,7 @@ body.overflow-hidden {
 section {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: $white;
 
   @include media(">=tablet") { 
     padding-top: 2rem;
