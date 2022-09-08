@@ -9,8 +9,25 @@
     }
 
     &__inner {
-        // border: 1px solid $blue;
         padding: 1rem;
         border-radius: 5px;
+    }
+
+    &__inner-image {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 2rem 0 2rem 0;
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        svg {
+            margin-left: 1rem;
+            width: 25px;
+            height: 25px;
+            fill: $black;
+        }
     }
 }
