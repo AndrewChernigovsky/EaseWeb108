@@ -8,6 +8,7 @@ import menuBurger from './components/burger-menu';
 import swiperMain from './components/sliders/swiperMain';
 import swiperCase from './components/sliders/swiperCase';
 import swiperOffer from './components/sliders/swiperOffer';
+import swiperFeedBack from './components/sliders/swiperFeedBack';
 import tabs from './components/tabs';
 // import bntOFFER from './components/btnOffer';
 
@@ -19,6 +20,7 @@ import tabs from './components/tabs';
     swiperMain.init();
     swiperOffer.init();
     swiperCase.init();
+    swiperFeedBack.init();
     tabs.init();
   });
 })(jQuery);

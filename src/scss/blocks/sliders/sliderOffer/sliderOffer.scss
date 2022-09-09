@@ -1,41 +1,83 @@
 .swiper-offer {
-    // background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
-    // background-image: url('../../images/content/bg-2.jpg');
-    // background: $orange5;
-    // background-size: cover;
     max-width: 100%;
     margin: 0 auto;
     position: relative;
     color: $white;
-    // @include media(">=tablet") { 
-    //     background-image: url('../../images/decor/file2@3000x3000.jpg');
-    // }
-    // @include media(">=desktop") { 
-    //     background-image: url('../../images/decor/file2@3500x3500.jpg');
-    // }
-
-
 
     &__wrapper {
-        min-height: 450px;
+        min-height: 300px;
         max-height: 450px;
     }
 
-    &__slide{
-        min-height: 600px;
+    &__slide {
+        min-height: 350px;
+
+        @include media('>=phone') {
+            min-height: 380px;
+        }
+
+        @include media('>=tablet') {
+            min-height: 450px;
+        }
+
+        @include media('>=desktop') {
+            min-height: 600px;
+        }
+    }
+
+    &__slide.slide1,
+    &__slide.slide2,
+    &__slide.slide3 {
+        background-size: cover;
+        background-position: center;
     }
 
     &__slide.slide1 {
-        background-image: url('../../images/content/bg-2.jpg');
-        background-size: cover;
+        background-image: url('../../images/content/bg-2-mb.jpg');
+      
+        @include media(">=tablet") { 
+            background-image: url('../../images/content/bg-2-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-image: url('../../images/content/bg-2.jpg');
+        }
     }
+
     &__slide.slide2 {
-        background-image: url('../../images/content/bg-3.jpg');
-        background-size: cover;
+        background-image: url('../../images/content/bg-3-mb.jpg');
+        background-position: -150px;
+
+        @include media(">=phone") { 
+            background-position: 10%;
+        }
+        
+        @include media(">=tablet") { 
+            background-image: url('../../images/content/bg-3-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-image: url('../../images/content/bg-3.jpg');
+        }
     }
+
     &__slide.slide3 {
-        background-image: url('../../images/content/bg-4.jpg');
-        background-size: cover;
+        background-image: url('../../images/content/bg-4-mb.jpg');
+        background-position: 90%;
+
+        @include media(">=phone") { 
+            background-position: 70%;
+        }
+
+        @include media(">=tablet") { 
+            background-position: 100%;
+            background-image: url('../../images/content/bg-4-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-position: 0;
+            background-image: url('../../images/content/bg-4.jpg');
+        }
     }
 
     .swiper-text-wrapper {
@@ -59,7 +101,7 @@
             margin-left: 2rem;
             width: 25px;
             height: 25px;
-            fill: white;
+            fill: $white;
         }
     }
 

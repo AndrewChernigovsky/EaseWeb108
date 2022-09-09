@@ -1,0 +1,15 @@
+extends ../../../../layout/sliders/sliderMain/sliderMain
+
+block mainWrapper
+    div(class=SliderFeedBack id=swiperFeedBackID)
+        block wrapper
+            div(class=classSliderFeedBackWrapper)
+                block includes
+                    include slide-blocks/slide1
+                    include slide-blocks/slide2
+                    include slide-blocks/slide3
+            block pagination
+                div(class=swiperPagination)
+            block navigation
+                div(class=swiperButtonPrev)
+                div(class=swiperButtonNext)
