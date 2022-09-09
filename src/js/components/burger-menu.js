@@ -12,6 +12,7 @@ const menuBurger =(() => {
     BURGER.addEventListener('click', (e) => {
       e.preventDefault();
       NAV.classList.toggle(CLASS_ACTIVE);
+      BODY.classList.toggle(CLASS_OVERFLOW)
       BURGER.classList.toggle(CLASS_ACTIVE)
     })
   };

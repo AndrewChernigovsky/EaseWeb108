@@ -7,6 +7,10 @@
 
     &__wrapper {
         padding-top: 1rem;
+        background-color: rgba($black, 0.6);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+        border-radius: 30px;
+        // box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.6);
 
         @include media('>=tablet') {
             padding-top: 3rem;
@@ -17,25 +21,4 @@
     @include media('>=tablet') {
         background-image: url('../../images/content/bg-111.jpg');
     }
-
-    // &::after{
-    //     content: '';
-    //     display: block;
-    //     position: sticky;
-    //     top: 0;
-    //     background-image: url('../../images/content/orange1.png');
-    //     background-size: cover;
-    //     width: 330px;
-    //     height: 350px;
-    // }
-    // &::before{
-    //     content: '';
-    //     display: block;
-    //     position: sticky;
-    //     top: 0;
-    //     background-image: url('../../images/content/orange2.png');
-    //     background-size: cover;
-    //     width: 330px;
-    //     height: 350px;
-    // }
 }

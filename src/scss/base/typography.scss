@@ -19,8 +19,12 @@
 }
 
 .title__h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
+
+  @include media(">=phone") {
+    font-size: 3rem;
+  }
 
   @include media('>=tablet') {
     font-size: 4.2rem;
@@ -96,7 +100,11 @@
 .introBlock-paraghraph {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px $black;
-  font-size: 4rem;
+  font-size: 2rem;
+
+  @include media(">=tablet") { 
+    font-size: 4rem;
+  }
 }
 
 .introBlock-paraghraphMin {
