@@ -4,7 +4,7 @@ const swiperFeedBack = (() => {
         spaceBetween: 20,
         speed: 800,
         autoplay: {
-        delay: 500000,
+        delay: 4000,
         disableOnInteraction: false,
         },
         centerInsufficientSlides: true,

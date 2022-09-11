@@ -4,7 +4,7 @@ const swiperCase = (() => {
         spaceBetween: 20,
         speed: 800,
         autoplay: {
-        delay: 1000500,
+        delay: 10000,
         disableOnInteraction: false,
         },
         centerInsufficientSlides: true,
@@ -24,7 +24,7 @@ const swiperCase = (() => {
         breakpoints: {
         768: {
             spaceBetween: 40,
-            slidesPerView: 1,
+            slidesPerView: 2,
         },
         },
     });

@@ -6,7 +6,7 @@
 
     &__wrapper {
         min-height: 300px;
-        max-height: 450px;
+        padding-bottom: 2rem;
     }
 
     &__slide {
@@ -17,11 +17,7 @@
         }
 
         @include media('>=tablet') {
-            min-height: 450px;
-        }
-
-        @include media('>=desktop') {
-            min-height: 600px;
+            min-height: 400px;
         }
     }
 
@@ -111,14 +107,15 @@
         margin: 0 auto;
         display: flex;
         display: grid;
-        padding-right: 5rem;
         align-items: center;
         justify-items: center;
         text-align: center;
+        max-width: 100%;
 
         @include media('>=tablet') {
             padding:  2rem;
             margin-bottom: -2.5rem;
+            max-width: calc(100% - 30%);
         }
     }
 
@@ -128,6 +125,12 @@
         border-radius: 50%;
         overflow: hidden;
         border: 1px solid;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .swiper-scrollbar {

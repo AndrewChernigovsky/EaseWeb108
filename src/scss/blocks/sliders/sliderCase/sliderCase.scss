@@ -1,21 +1,13 @@
 .swiper-case {
-    // background: linear-gradient(249deg, #6F0AAA 40%, $orange 40%);
-  
-    // background: $orange5;
     background-size: cover;
     max-width: 100%;
     margin: 0 auto;
     color: $white;
-    // @include media(">=tablet") { 
-    //     background-image: url('../../images/decor/file2@3000x3000.jpg');
-    // }
-    // @include media(">=desktop") { 
-    //     background-image: url('../../images/decor/file2@3500x3500.jpg');
-    // }
 
     &__wrapper {
         min-height: 350px;
         max-height: 350px;
+        margin: 0 auto;
     }
 
     .swiper-text-wrapper {
@@ -39,7 +31,7 @@
             margin-left: 2rem;
             width: 25px;
             height: 25px;
-            fill: white;
+            fill: $white;
         }
     }
 
@@ -67,9 +59,10 @@
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        border: 1px solid $white;
+        border: 1px solid $black;
     }
+
     .swiper-pagination-bullet-active{
-        background: linear-gradient($red, $blue3);
+        background: transparent;
     }
 }
