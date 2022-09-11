@@ -1,67 +1,133 @@
-.swiperFeedBack-wrapperAll {
-    overflow-y: scroll;
-}
-
-.swiper {
-    overflow: hidden;
-    position: relative;
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        background-size: contain;
-        background-color: transparent;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        color: transparent;
-        background-position: center;
-        background-size: 50px;
-        background-repeat: no-repeat;
-        top: 50%;
-    }
-
-
-    .swiper-button-prev {
-        background-image: url('../../images/icons/arrowLeftMainSlider.svg');
-    }
-    .swiper-button-next {
-        background-image: url('../../images/icons/arrowRightMainSlider.svg');
-    }
-}
-
 .swiper-FeedBack {
-    background-image: url('../../images/decor/file2@2000x2000.jpg');
-    background: linear-gradient(249deg, $darkblue, transparent);
-    background-size: cover;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
-    opacity: 0;
-    z-index: -1;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 50%;
-    margin-top: -225px;
-
-    @include media(">=tablet") { 
-        background-image: url('../../images/decor/file2@3000x3000.jpg');
-    }
-    @include media(">=desktop") { 
-        background-image: url('../../images/decor/file2@3500x3500.jpg');
-    }
+    position: relative;
+    color: $white;
 
     &__wrapper {
+        min-height: 300px;
+        max-height: 450px;
+    }
+
+    &__slide {
         min-height: 350px;
+
+        @include media('>=phone') {
+            min-height: 380px;
+        }
+
+        @include media('>=tablet') {
+            min-height: 450px;
+        }
+
+        @include media('>=desktop') {
+            min-height: 600px;
+        }
+    }
+
+    &__slide.slide1,
+    &__slide.slide2,
+    &__slide.slide3 {
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__slide.slide1 {
+        background-image: url('../../images/content/bg-2-mb.jpg');
+      
+        @include media(">=tablet") { 
+            background-image: url('../../images/content/bg-2-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-image: url('../../images/content/bg-2.jpg');
+        }
+    }
+
+    &__slide.slide2 {
+        background-image: url('../../images/content/bg-3-mb.jpg');
+        background-position: -150px;
+
+        @include media(">=phone") { 
+            background-position: 10%;
+        }
+        
+        @include media(">=tablet") { 
+            background-image: url('../../images/content/bg-3-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-image: url('../../images/content/bg-3.jpg');
+        }
+    }
+
+    &__slide.slide3 {
+        background-image: url('../../images/content/bg-4-mb.jpg');
+        background-position: 90%;
+
+        @include media(">=phone") { 
+            background-position: 70%;
+        }
+
+        @include media(">=tablet") { 
+            background-position: 100%;
+            background-image: url('../../images/content/bg-4-tb.jpg');
+        }
+
+        @include media(">=desktop") { 
+            background-position: 0;
+            background-image: url('../../images/content/bg-4.jpg');
+        }
+    }
+
+    .swiper-text-wrapper {
+        text-align: right;
+    }
+
+    .swiper-image-wrapper {
+        max-width: 350px;
+    }
+
+    .paragaraph-icon-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+            line-height: 3rem;
+        }
+
+        svg {
+            margin-left: 2rem;
+            width: 25px;
+            height: 25px;
+            fill: $white;
+        }
     }
 
     &__slide-inner {
         max-width: 100%;
         padding:  1rem;
         margin: 0 auto;
+        display: flex;
+        display: grid;
+        padding-right: 5rem;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
 
         @include media('>=tablet') {
             padding:  2rem;
+            margin-bottom: -2.5rem;
         }
+    }
+
+    &__slide-wrapper-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid;
     }
 
     .swiper-scrollbar {
@@ -87,6 +153,10 @@
         }
     }
 
+    .input-mainWrapper {
+        padding: 0 5rem 5rem 5rem;
+    }
+
     .swiper-pagination {
         bottom: 0;
     }
@@ -100,10 +170,4 @@
     .swiper-pagination-bullet-active{
         background: linear-gradient($red, $blue3);
     }
-}
-
-.swiper-FeedBack.active {
-    opacity: 1;
-    z-index: 333;
-    transition: $base-transition;
 }

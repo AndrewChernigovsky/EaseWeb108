@@ -36,5 +36,6 @@ const swiperCase = (() => {
     };
 })();
 
+
   export default swiperCase;
   

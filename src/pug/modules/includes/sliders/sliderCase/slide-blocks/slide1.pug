@@ -1,7 +1,12 @@
 div(class=classSliderCaseSlide)
-    div(class=classSliderCaseSlideWrapper)
-        div(class=classSliderCaseSlideInner)
-            div(class=swiperSliderImage)
-                include ../../../pictures/page__index/content/case
-            div(class=swiperTextWrapper)
-                +a(urlLinkSwiperCase, swiperCaseText.slide1Link2)
+	div(class=classSliderCaseSlideWrapper)
+		div(class=classSliderCaseSlideInner)
+			div(class=swiperSliderImage)
+				+picture(
+					caseSectionImagesCase1.alt,
+					caseSectionImagesCase1.type,
+					caseSectionImagesCase1.path,
+					caseSectionImagesCase1.path2x,
+				)
+			div(class=swiperTextWrapper)
+				+a(urlLinkSwiperCase, swiperCaseText.slide1Link2)

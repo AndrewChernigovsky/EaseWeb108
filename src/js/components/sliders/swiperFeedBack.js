@@ -1,10 +1,10 @@
 const swiperFeedBack = (() => {
-    const accountantInit = new Swiper('.swiper-feedBack', {
+    const accountantInit = new Swiper('.swiper-FeedBack', {
         slidesPerView: 1,
         spaceBetween: 20,
         speed: 800,
         autoplay: {
-        delay: 1000500,
+        delay: 500000,
         disableOnInteraction: false,
         },
         centerInsufficientSlides: true,
